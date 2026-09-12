@@ -1,0 +1,289 @@
+2026-09-11T16:58:23.304-05:00  INFO 60880 --- [civix] [restartedMain] com.civix.CivixApplication               : Starting CivixApplication using Java 21.0.12.1 with PID 60880 (C:\Users\gmari\IdeaProjects\civix\target\classes started by gmari in C:\Users\gmari\IdeaProjects\civix)
+2026-09-11T16:58:23.309-05:00 DEBUG 60880 --- [civix] [restartedMain] com.civix.CivixApplication               : Running with Spring Boot v4.1.1, Spring v7.0.9
+2026-09-11T16:58:23.310-05:00  INFO 60880 --- [civix] [restartedMain] com.civix.CivixApplication               : No active profile set, falling back to 1 default profile: "default"
+2026-09-11T16:58:23.381-05:00  INFO 60880 --- [civix] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-09-11T16:58:23.382-05:00  INFO 60880 --- [civix] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-09-11T16:58:24.291-05:00  INFO 60880 --- [civix] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-09-11T16:58:24.356-05:00  INFO 60880 --- [civix] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 56 ms. Found 7 JPA repository interfaces.
+2026-09-11T16:58:24.842-05:00  INFO 60880 --- [civix] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-09-11T16:58:24.856-05:00  INFO 60880 --- [civix] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-09-11T16:58:24.856-05:00  INFO 60880 --- [civix] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-09-11T16:58:24.902-05:00  INFO 60880 --- [civix] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1519 ms
+2026-09-11T16:58:25.099-05:00  INFO 60880 --- [civix] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-09-11T16:58:25.180-05:00  INFO 60880 --- [civix] [restartedMain] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.5.Final
+2026-09-11T16:58:25.674-05:00  INFO 60880 --- [civix] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-09-11T16:58:25.710-05:00  INFO 60880 --- [civix] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-09-11T16:58:25.872-05:00  INFO 60880 --- [civix] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@6944143d
+2026-09-11T16:58:25.873-05:00  INFO 60880 --- [civix] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-09-11T16:58:25.908-05:00  WARN 60880 --- [civix] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-09-11T16:58:25.930-05:00  INFO 60880 --- [civix] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/db_civix]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.6
+	Default catalog/schema: db_civix/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-09-11T16:58:26.979-05:00  INFO 60880 --- [civix] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-09-11T16:58:27.143-05:00  INFO 60880 --- [civix] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-09-11T16:58:27.209-05:00  INFO 60880 --- [civix] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-09-11T16:58:27.517-05:00  WARN 60880 --- [civix] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-09-11T16:58:27.932-05:00  INFO 60880 --- [civix] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-09-11T16:58:27.937-05:00  INFO 60880 --- [civix] [restartedMain] com.civix.CivixApplication               : Started CivixApplication in 5.208 seconds (process running for 6.136)
+2026-09-11T16:58:27.939-05:00  WARN 60880 --- [civix] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-09-11T16:58:27.939-05:00  WARN 60880 --- [civix] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-09-11T17:00:38.696-05:00  INFO 60880 --- [civix] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2026-09-11T17:00:38.701-05:00  INFO 60880 --- [civix] [Thread-1] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-09-11T17:00:38.707-05:00  INFO 60880 --- [civix] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-09-11T17:00:38.711-05:00  INFO 60880 --- [civix] [Thread-1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-09-11T17:00:38.716-05:00  INFO 60880 --- [civix] [Thread-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-09-11T17:00:38.718-05:00  INFO 60880 --- [civix] [Thread-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-09-11T17:00:38.810-05:00  INFO 60880 --- [civix] [restartedMain] com.civix.CivixApplication               : Starting CivixApplication using Java 21.0.12.1 with PID 60880 (C:\Users\gmari\IdeaProjects\civix\target\classes started by gmari in C:\Users\gmari\IdeaProjects\civix)
+2026-09-11T17:00:38.810-05:00 DEBUG 60880 --- [civix] [restartedMain] com.civix.CivixApplication               : Running with Spring Boot v4.1.1, Spring v7.0.9
+2026-09-11T17:00:38.810-05:00  INFO 60880 --- [civix] [restartedMain] com.civix.CivixApplication               : No active profile set, falling back to 1 default profile: "default"
+2026-09-11T17:00:39.119-05:00  INFO 60880 --- [civix] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-09-11T17:00:39.151-05:00  INFO 60880 --- [civix] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 30 ms. Found 7 JPA repository interfaces.
+2026-09-11T17:00:39.247-05:00  INFO 60880 --- [civix] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-09-11T17:00:39.250-05:00  INFO 60880 --- [civix] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-09-11T17:00:39.250-05:00  INFO 60880 --- [civix] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-09-11T17:00:39.271-05:00  INFO 60880 --- [civix] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 458 ms
+2026-09-11T17:00:39.302-05:00  INFO 60880 --- [civix] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-09-11T17:00:39.358-05:00  INFO 60880 --- [civix] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-09-11T17:00:39.364-05:00  INFO 60880 --- [civix] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2026-09-11T17:00:39.536-05:00  INFO 60880 --- [civix] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection org.postgresql.jdbc.PgConnection@5b4bd9bf
+2026-09-11T17:00:39.537-05:00  INFO 60880 --- [civix] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2026-09-11T17:00:39.543-05:00  WARN 60880 --- [civix] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-09-11T17:00:39.549-05:00  INFO 60880 --- [civix] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/db_civix]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.6
+	Default catalog/schema: db_civix/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-09-11T17:00:39.692-05:00  INFO 60880 --- [civix] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-09-11T17:00:39.747-05:00  INFO 60880 --- [civix] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-09-11T17:00:39.843-05:00  WARN 60880 --- [civix] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-09-11T17:00:40.020-05:00  INFO 60880 --- [civix] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-09-11T17:00:40.023-05:00  INFO 60880 --- [civix] [restartedMain] com.civix.CivixApplication               : Started CivixApplication in 1.245 seconds (process running for 138.222)
+2026-09-11T17:00:40.024-05:00  WARN 60880 --- [civix] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-09-11T17:00:40.024-05:00  WARN 60880 --- [civix] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-09-11T17:00:40.025-05:00  INFO 60880 --- [civix] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-09-11T17:03:51.003-05:00  INFO 60880 --- [civix] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2026-09-11T17:03:51.004-05:00  INFO 60880 --- [civix] [Thread-5] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-09-11T17:03:51.009-05:00  INFO 60880 --- [civix] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-09-11T17:03:51.011-05:00  INFO 60880 --- [civix] [Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-09-11T17:03:51.012-05:00  INFO 60880 --- [civix] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2026-09-11T17:03:51.013-05:00  INFO 60880 --- [civix] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2026-09-11T17:03:51.084-05:00  INFO 60880 --- [civix] [restartedMain] com.civix.CivixApplication               : Starting CivixApplication using Java 21.0.12.1 with PID 60880 (C:\Users\gmari\IdeaProjects\civix\target\classes started by gmari in C:\Users\gmari\IdeaProjects\civix)
+2026-09-11T17:03:51.085-05:00 DEBUG 60880 --- [civix] [restartedMain] com.civix.CivixApplication               : Running with Spring Boot v4.1.1, Spring v7.0.9
+2026-09-11T17:03:51.085-05:00  INFO 60880 --- [civix] [restartedMain] com.civix.CivixApplication               : No active profile set, falling back to 1 default profile: "default"
+2026-09-11T17:03:51.252-05:00  INFO 60880 --- [civix] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-09-11T17:03:51.274-05:00  INFO 60880 --- [civix] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 20 ms. Found 7 JPA repository interfaces.
+2026-09-11T17:03:51.362-05:00  INFO 60880 --- [civix] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-09-11T17:03:51.363-05:00  INFO 60880 --- [civix] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-09-11T17:03:51.363-05:00  INFO 60880 --- [civix] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-09-11T17:03:51.386-05:00  INFO 60880 --- [civix] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 299 ms
+2026-09-11T17:03:51.423-05:00  INFO 60880 --- [civix] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-09-11T17:03:51.451-05:00  INFO 60880 --- [civix] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-09-11T17:03:51.453-05:00  INFO 60880 --- [civix] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2026-09-11T17:03:51.507-05:00  INFO 60880 --- [civix] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection org.postgresql.jdbc.PgConnection@68095d0d
+2026-09-11T17:03:51.507-05:00  INFO 60880 --- [civix] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2026-09-11T17:03:51.513-05:00  WARN 60880 --- [civix] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-09-11T17:03:51.521-05:00  INFO 60880 --- [civix] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/db_civix]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.6
+	Default catalog/schema: db_civix/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-09-11T17:03:51.694-05:00  INFO 60880 --- [civix] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-09-11T17:03:51.776-05:00  INFO 60880 --- [civix] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-09-11T17:03:51.923-05:00  WARN 60880 --- [civix] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-09-11T17:03:52.093-05:00  INFO 60880 --- [civix] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-09-11T17:03:52.096-05:00  INFO 60880 --- [civix] [restartedMain] com.civix.CivixApplication               : Started CivixApplication in 1.033 seconds (process running for 330.295)
+2026-09-11T17:03:52.097-05:00  WARN 60880 --- [civix] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-09-11T17:03:52.097-05:00  WARN 60880 --- [civix] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-09-11T17:03:52.098-05:00  INFO 60880 --- [civix] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-09-11T17:21:15.463-05:00  INFO 60880 --- [civix] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2026-09-11T17:21:15.465-05:00  INFO 60880 --- [civix] [Thread-9] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-09-11T17:21:15.469-05:00  INFO 60880 --- [civix] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-09-11T17:21:15.471-05:00  INFO 60880 --- [civix] [Thread-9] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-09-11T17:21:15.472-05:00  INFO 60880 --- [civix] [Thread-9] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2026-09-11T17:21:15.473-05:00  INFO 60880 --- [civix] [Thread-9] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2026-09-11T17:21:15.565-05:00  INFO 60880 --- [civix] [restartedMain] com.civix.CivixApplication               : Starting CivixApplication using Java 21.0.12.1 with PID 60880 (C:\Users\gmari\IdeaProjects\civix\target\classes started by gmari in C:\Users\gmari\IdeaProjects\civix)
+2026-09-11T17:21:15.567-05:00 DEBUG 60880 --- [civix] [restartedMain] com.civix.CivixApplication               : Running with Spring Boot v4.1.1, Spring v7.0.9
+2026-09-11T17:21:15.567-05:00  INFO 60880 --- [civix] [restartedMain] com.civix.CivixApplication               : No active profile set, falling back to 1 default profile: "default"
+2026-09-11T17:21:15.772-05:00  INFO 60880 --- [civix] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-09-11T17:21:15.787-05:00  INFO 60880 --- [civix] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 13 ms. Found 6 JPA repository interfaces.
+2026-09-11T17:21:15.863-05:00  INFO 60880 --- [civix] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-09-11T17:21:15.865-05:00  INFO 60880 --- [civix] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-09-11T17:21:15.865-05:00  INFO 60880 --- [civix] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-09-11T17:21:15.887-05:00  INFO 60880 --- [civix] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 318 ms
+2026-09-11T17:21:15.925-05:00  INFO 60880 --- [civix] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-09-11T17:21:15.960-05:00  INFO 60880 --- [civix] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-09-11T17:21:15.962-05:00  INFO 60880 --- [civix] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Starting...
+2026-09-11T17:21:16.022-05:00  INFO 60880 --- [civix] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-4 - Added connection org.postgresql.jdbc.PgConnection@2c9422b7
+2026-09-11T17:21:16.022-05:00  INFO 60880 --- [civix] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Start completed.
+2026-09-11T17:21:16.030-05:00  WARN 60880 --- [civix] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-09-11T17:21:16.037-05:00  INFO 60880 --- [civix] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/db_civix]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.6
+	Default catalog/schema: db_civix/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-09-11T17:21:16.182-05:00  INFO 60880 --- [civix] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-09-11T17:21:16.237-05:00  INFO 60880 --- [civix] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-09-11T17:21:16.357-05:00  WARN 60880 --- [civix] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-09-11T17:21:16.617-05:00  INFO 60880 --- [civix] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-09-11T17:21:16.619-05:00  INFO 60880 --- [civix] [restartedMain] com.civix.CivixApplication               : Started CivixApplication in 1.091 seconds (process running for 1374.818)
+2026-09-11T17:21:16.621-05:00  WARN 60880 --- [civix] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-09-11T17:21:16.621-05:00  WARN 60880 --- [civix] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-09-11T17:21:16.621-05:00  INFO 60880 --- [civix] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-09-11T17:21:18.025-05:00  INFO 60880 --- [civix] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 6 class path changes (6 additions, 0 deletions, 0 modifications)
+2026-09-11T17:21:18.026-05:00  INFO 60880 --- [civix] [Thread-13] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-09-11T17:21:18.029-05:00  INFO 60880 --- [civix] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-09-11T17:21:18.031-05:00  INFO 60880 --- [civix] [Thread-13] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-09-11T17:21:18.031-05:00  INFO 60880 --- [civix] [Thread-13] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown initiated...
+2026-09-11T17:21:18.032-05:00  INFO 60880 --- [civix] [Thread-13] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown completed.
+2026-09-11T17:21:18.097-05:00  INFO 60880 --- [civix] [restartedMain] com.civix.CivixApplication               : Starting CivixApplication using Java 21.0.12.1 with PID 60880 (C:\Users\gmari\IdeaProjects\civix\target\classes started by gmari in C:\Users\gmari\IdeaProjects\civix)
+2026-09-11T17:21:18.097-05:00 DEBUG 60880 --- [civix] [restartedMain] com.civix.CivixApplication               : Running with Spring Boot v4.1.1, Spring v7.0.9
+2026-09-11T17:21:18.097-05:00  INFO 60880 --- [civix] [restartedMain] com.civix.CivixApplication               : No active profile set, falling back to 1 default profile: "default"
+2026-09-11T17:21:18.244-05:00  INFO 60880 --- [civix] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-09-11T17:21:18.261-05:00  INFO 60880 --- [civix] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 16 ms. Found 7 JPA repository interfaces.
+2026-09-11T17:21:18.327-05:00  INFO 60880 --- [civix] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-09-11T17:21:18.327-05:00  INFO 60880 --- [civix] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-09-11T17:21:18.327-05:00  INFO 60880 --- [civix] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-09-11T17:21:18.348-05:00  INFO 60880 --- [civix] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 249 ms
+2026-09-11T17:21:18.374-05:00  INFO 60880 --- [civix] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-09-11T17:21:18.400-05:00  INFO 60880 --- [civix] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-09-11T17:21:18.401-05:00  INFO 60880 --- [civix] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Starting...
+2026-09-11T17:21:18.444-05:00  INFO 60880 --- [civix] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-5 - Added connection org.postgresql.jdbc.PgConnection@3a3ba91c
+2026-09-11T17:21:18.444-05:00  INFO 60880 --- [civix] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Start completed.
+2026-09-11T17:21:18.450-05:00  WARN 60880 --- [civix] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-09-11T17:21:18.456-05:00  INFO 60880 --- [civix] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/db_civix]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.6
+	Default catalog/schema: db_civix/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-09-11T17:21:18.569-05:00  INFO 60880 --- [civix] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-09-11T17:21:18.611-05:00  INFO 60880 --- [civix] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-09-11T17:21:18.732-05:00  WARN 60880 --- [civix] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-09-11T17:21:18.816-05:00  INFO 60880 --- [civix] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-09-11T17:21:18.818-05:00  INFO 60880 --- [civix] [restartedMain] com.civix.CivixApplication               : Started CivixApplication in 0.742 seconds (process running for 1377.017)
+2026-09-11T17:21:18.819-05:00  WARN 60880 --- [civix] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-09-11T17:21:18.819-05:00  WARN 60880 --- [civix] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-09-11T17:21:18.820-05:00  INFO 60880 --- [civix] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-09-11T17:23:50.312-05:00  INFO 60880 --- [civix] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2026-09-11T17:23:50.315-05:00  INFO 60880 --- [civix] [Thread-17] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-09-11T17:23:50.319-05:00  INFO 60880 --- [civix] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-09-11T17:23:50.321-05:00  INFO 60880 --- [civix] [Thread-17] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-09-11T17:23:50.321-05:00  INFO 60880 --- [civix] [Thread-17] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown initiated...
+2026-09-11T17:23:50.323-05:00  INFO 60880 --- [civix] [Thread-17] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown completed.
+2026-09-11T17:23:50.391-05:00  INFO 60880 --- [civix] [restartedMain] com.civix.CivixApplication               : Starting CivixApplication using Java 21.0.12.1 with PID 60880 (C:\Users\gmari\IdeaProjects\civix\target\classes started by gmari in C:\Users\gmari\IdeaProjects\civix)
+2026-09-11T17:23:50.391-05:00 DEBUG 60880 --- [civix] [restartedMain] com.civix.CivixApplication               : Running with Spring Boot v4.1.1, Spring v7.0.9
+2026-09-11T17:23:50.392-05:00  INFO 60880 --- [civix] [restartedMain] com.civix.CivixApplication               : No active profile set, falling back to 1 default profile: "default"
+2026-09-11T17:23:50.578-05:00  INFO 60880 --- [civix] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-09-11T17:23:50.598-05:00  INFO 60880 --- [civix] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 17 ms. Found 7 JPA repository interfaces.
+2026-09-11T17:23:50.657-05:00  INFO 60880 --- [civix] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-09-11T17:23:50.657-05:00  INFO 60880 --- [civix] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-09-11T17:23:50.657-05:00  INFO 60880 --- [civix] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-09-11T17:23:50.677-05:00  INFO 60880 --- [civix] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 284 ms
+2026-09-11T17:23:50.699-05:00  INFO 60880 --- [civix] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-09-11T17:23:50.723-05:00  INFO 60880 --- [civix] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-09-11T17:23:50.724-05:00  INFO 60880 --- [civix] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Starting...
+2026-09-11T17:23:50.765-05:00  INFO 60880 --- [civix] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-6 - Added connection org.postgresql.jdbc.PgConnection@1ba2db99
+2026-09-11T17:23:50.766-05:00  INFO 60880 --- [civix] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Start completed.
+2026-09-11T17:23:50.771-05:00  WARN 60880 --- [civix] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-09-11T17:23:50.777-05:00  INFO 60880 --- [civix] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/db_civix]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.6
+	Default catalog/schema: db_civix/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-09-11T17:23:50.871-05:00  INFO 60880 --- [civix] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-09-11T17:23:50.912-05:00  INFO 60880 --- [civix] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-09-11T17:23:51.014-05:00  WARN 60880 --- [civix] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-09-11T17:23:51.092-05:00  INFO 60880 --- [civix] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-09-11T17:23:51.093-05:00  INFO 60880 --- [civix] [restartedMain] com.civix.CivixApplication               : Started CivixApplication in 0.723 seconds (process running for 1529.293)
+2026-09-11T17:23:51.093-05:00  WARN 60880 --- [civix] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-09-11T17:23:51.094-05:00  WARN 60880 --- [civix] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-09-11T17:23:51.094-05:00  INFO 60880 --- [civix] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-09-11T17:24:05.803-05:00  INFO 60880 --- [civix] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2026-09-11T17:24:05.806-05:00  INFO 60880 --- [civix] [Thread-21] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-09-11T17:24:05.821-05:00  INFO 60880 --- [civix] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-09-11T17:24:05.824-05:00  INFO 60880 --- [civix] [Thread-21] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-09-11T17:24:05.825-05:00  INFO 60880 --- [civix] [Thread-21] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown initiated...
+2026-09-11T17:24:05.827-05:00  INFO 60880 --- [civix] [Thread-21] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown completed.
+2026-09-11T17:24:05.995-05:00  INFO 60880 --- [civix] [restartedMain] com.civix.CivixApplication               : Starting CivixApplication using Java 21.0.12.1 with PID 60880 (C:\Users\gmari\IdeaProjects\civix\target\classes started by gmari in C:\Users\gmari\IdeaProjects\civix)
+2026-09-11T17:24:05.996-05:00 DEBUG 60880 --- [civix] [restartedMain] com.civix.CivixApplication               : Running with Spring Boot v4.1.1, Spring v7.0.9
+2026-09-11T17:24:05.996-05:00  INFO 60880 --- [civix] [restartedMain] com.civix.CivixApplication               : No active profile set, falling back to 1 default profile: "default"
+2026-09-11T17:24:06.396-05:00  INFO 60880 --- [civix] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-09-11T17:24:06.424-05:00  INFO 60880 --- [civix] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 26 ms. Found 7 JPA repository interfaces.
+2026-09-11T17:24:06.533-05:00  INFO 60880 --- [civix] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-09-11T17:24:06.534-05:00  INFO 60880 --- [civix] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-09-11T17:24:06.535-05:00  INFO 60880 --- [civix] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-09-11T17:24:06.567-05:00  INFO 60880 --- [civix] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 562 ms
+2026-09-11T17:24:06.626-05:00  INFO 60880 --- [civix] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-09-11T17:24:06.675-05:00  INFO 60880 --- [civix] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-09-11T17:24:06.676-05:00  INFO 60880 --- [civix] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Starting...
+2026-09-11T17:24:06.743-05:00  INFO 60880 --- [civix] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-7 - Added connection org.postgresql.jdbc.PgConnection@34176311
+2026-09-11T17:24:06.744-05:00  INFO 60880 --- [civix] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Start completed.
+2026-09-11T17:24:06.753-05:00  WARN 60880 --- [civix] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-09-11T17:24:06.763-05:00  INFO 60880 --- [civix] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/db_civix]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.6
+	Default catalog/schema: db_civix/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-09-11T17:24:06.946-05:00  INFO 60880 --- [civix] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-09-11T17:24:07.017-05:00  INFO 60880 --- [civix] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-09-11T17:24:07.323-05:00  WARN 60880 --- [civix] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-09-11T17:24:07.510-05:00  INFO 60880 --- [civix] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-09-11T17:24:07.515-05:00  INFO 60880 --- [civix] [restartedMain] com.civix.CivixApplication               : Started CivixApplication in 1.598 seconds (process running for 1545.715)
+2026-09-11T17:24:07.517-05:00  WARN 60880 --- [civix] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-09-11T17:24:07.517-05:00  WARN 60880 --- [civix] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-09-11T17:24:07.518-05:00  INFO 60880 --- [civix] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-09-11T17:32:28.346-05:00  INFO 60880 --- [civix] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-09-11T17:32:28.354-05:00  INFO 60880 --- [civix] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-09-11T17:32:28.360-05:00  INFO 60880 --- [civix] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-09-11T17:32:28.366-05:00  INFO 60880 --- [civix] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown initiated...
+2026-09-11T17:32:28.368-05:00  INFO 60880 --- [civix] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown completed.
