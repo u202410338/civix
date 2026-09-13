@@ -3,8 +3,6 @@ package com.civix.entidades;
 import jakarta.persistence.*;
 import lombok.*;
 
-import java.time.LocalDateTime;
-
 @Entity
 @Setter @Getter @AllArgsConstructor @NoArgsConstructor
 public class Evidencia {
