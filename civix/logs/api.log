@@ -738,3 +738,8 @@ Caused by: java.lang.ClassNotFoundException: com.civix.servicios.CalificacionSer
 2026-09-14T18:08:25.575-05:00  INFO 196972 --- [civix] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
 2026-09-14T18:08:26.567-05:00  INFO 196972 --- [civix] [http-nio-8080-exec-4] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 607 ms
 2026-09-14T18:10:06.733-05:00  INFO 196972 --- [civix] [http-nio-8080-exec-8] com.civix.servicios.UsuarioServicio      : Insertando usuario: string
+2026-09-14T18:13:50.835-05:00  INFO 196972 --- [civix] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-09-14T18:13:50.843-05:00  INFO 196972 --- [civix] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-09-14T18:13:50.849-05:00  INFO 196972 --- [civix] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-09-14T18:13:50.853-05:00  INFO 196972 --- [civix] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-09-14T18:13:50.856-05:00  INFO 196972 --- [civix] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
