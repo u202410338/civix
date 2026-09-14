@@ -1,3 +1,3 @@
 # CivixIS
 
-Grupo 5
+Civix es una plataforma digital desarrollada por la startup CivixIS, orientada a fortalecer la participación ciudadana y mejorar la comunicación entre los ciudadanos y los gobiernos locales. Su propósito principal es brindar un canal accesible y eficiente para que la población reporte problemáticas de su entorno, como deficiencias en infraestructura, seguridad o servicios públicos. A través de esta herramienta, los usuarios pueden registrar incidencias mediante descripciones, imágenes y ubicación geográfica. Posteriormente, el sistema organiza y canaliza esta información hacia las autoridades correspondientes, lo que facilita el seguimiento de los casos y promueve una gestión municipal más transparente y eficiente.  
