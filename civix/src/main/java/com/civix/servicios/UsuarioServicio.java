@@ -8,31 +8,27 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Slf4j
 @Service
 public class UsuarioServicio {
     @Autowired
     private UsuarioRepositorio usuarioRepositorio;
-
     @Transactional
-    public Usuario insert(Usuario usuario){
+    public Usuario registrar(Usuario usuario){
         UsuarioServicio.log.info("Insertando usuario: {}", usuario.getCorreo());
         return usuarioRepositorio.save(usuario);
     }
-
     public List<Usuario> listar(){
         return usuarioRepositorio.findAll();
     }
-
-    public Usuario obtenerPorId(Long id){
+    public Usuario buscarPorId(Long id){
         return usuarioRepositorio.findById(id).orElse(null);
     }
-
-    public Usuario obtenerPorCorreo(String correo){
+    public Optional<Usuario> buscarPorCorreo(String correo){
         return usuarioRepositorio.findByCorreo(correo);
     }
-
     @Transactional
     public void eliminar(Long id){
         if(!usuarioRepositorio.existsById(id)){

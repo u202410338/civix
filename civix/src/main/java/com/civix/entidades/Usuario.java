@@ -17,6 +17,6 @@ public class Usuario {
     private String passwordHash;
     private String estado;
     @ManyToOne
-    @JoinColumn(name = "id_rol", nullable = false)
+    @JoinColumn(name = "id_rol")
     private Rol rol;
 }

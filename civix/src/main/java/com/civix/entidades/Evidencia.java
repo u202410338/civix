@@ -13,6 +13,6 @@ public class Evidencia {
     private String tipoArchivo;
     private String urlArchivo;
     @ManyToOne
-    @JoinColumn(name = "id_incidencia", nullable = false)
+    @JoinColumn(name = "id_incidencia")
     private Incidencia incidencia;
 }

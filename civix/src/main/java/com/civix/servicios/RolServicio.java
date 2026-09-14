@@ -12,16 +12,13 @@ import java.util.List;
 public class RolServicio {
     @Autowired
     private RolRepositorio rolRepositorio;
-
     @Transactional
-    public Rol insertar(Rol rol){
+    public Rol registrar(Rol rol){
         return rolRepositorio.save(rol);
     }
-
     public List<Rol> listar(){
         return rolRepositorio.findAll();
     }
-
     @Transactional
     public void eliminar(Long id){
         rolRepositorio.deleteById(id);

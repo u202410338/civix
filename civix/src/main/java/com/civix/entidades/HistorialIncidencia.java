@@ -18,7 +18,7 @@ public class HistorialIncidencia {
     private LocalDateTime fechaCambio;
     private String usuarioAccion;
     @ManyToOne
-    @JoinColumn(name = "id_incidencia", nullable = false)
+    @JoinColumn(name = "id_incidencia")
     private Incidencia incidencia;
     @ManyToOne
     @JoinColumn(name = "id_usuario")

@@ -15,6 +15,6 @@ public class Calificacion {
     private LocalDateTime fechaCalificacion;
     private Integer puntuacion;
     @ManyToOne
-    @JoinColumn(name = "id_incidencia", nullable = false)
+    @JoinColumn(name = "id_incidencia")
     private Incidencia incidencia;
 }

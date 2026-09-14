@@ -23,6 +23,6 @@ public class Incidencia {
     private Double longitud;
     private String prioridad;
     @ManyToOne
-    @JoinColumn(name = "id_categoria", nullable = false)
+    @JoinColumn(name = "id_categoria")
     private Categoria categoria;
 }

@@ -8,5 +8,5 @@ import java.util.List;
 
 @Repository
 public interface EvidenciaRepositorio extends JpaRepository<Evidencia,Long> {
-    List<Evidencia> findByIncidencia_IdIncidencia(Long incidencia);
+    List<Evidencia> findByIncidencia_IdIncidencia(Long idIncidencia);
 }

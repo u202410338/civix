@@ -13,7 +13,6 @@ import java.util.List;
 public class CalificacionServicio {
     @Autowired
     private CalificacionRepositorio calificacionRepositorio;
-
     @Transactional
     public Calificacion registrar(Calificacion calificacion){
         if(calificacion.getFechaCalificacion()==null){
@@ -21,12 +20,10 @@ public class CalificacionServicio {
         }
         return calificacionRepositorio.save(calificacion);
     }
-
     public List<Calificacion> listar(){
         return calificacionRepositorio.findAll();
     }
-
-    public Calificacion buscar(Long id){
+    public Calificacion buscarPorId(Long id){
         return calificacionRepositorio.findById(id).orElse(null);
     }
 }
