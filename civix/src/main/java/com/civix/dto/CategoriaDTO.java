@@ -9,13 +9,11 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class UsuarioDTO {
-    private Long idUsuario;
+public class CategoriaDTO {
+    private Long idCategoria;
     private String nombre;
-    private String apellido;
-    private String correo;
-    private String dni;
-    private String telefono;
+    private String descripcion;
     private String estado;
-    private RolDTO rol;
+    private Integer horasEstimadas;
+    private String icono;
 }
