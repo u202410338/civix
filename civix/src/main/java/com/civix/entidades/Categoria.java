@@ -1,17 +1,24 @@
 package com.civix.entidades;
 
 import jakarta.persistence.*;
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 @Entity
-@Setter @Getter @AllArgsConstructor @NoArgsConstructor
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
 public class Categoria {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idCategoria;
+
     private String nombre;
     private String descripcion;
-    private String estado;
-    private Integer horasEstimadas;
     private String icono;
+    private Integer horasEstimadas;
+    private Boolean estado;
 }

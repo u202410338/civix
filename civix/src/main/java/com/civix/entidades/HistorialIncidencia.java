@@ -1,25 +1,32 @@
 package com.civix.entidades;
 
 import jakarta.persistence.*;
-import lombok.*;
-
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 import java.time.LocalDateTime;
 
 @Entity
-@Setter @Getter @AllArgsConstructor @NoArgsConstructor
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
 public class HistorialIncidencia {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idHistorial;
-    private String areaAsignada;
-    private String comentario;
     private String estadoAnterior;
     private String estadoNuevo;
-    private LocalDateTime fechaCambio;
+    private String comentario;
+    private String areaAsignada;
     private String usuarioAccion;
+    private LocalDateTime fechaCambio;
+
     @ManyToOne
     @JoinColumn(name = "id_incidencia")
     private Incidencia incidencia;
+
     @ManyToOne
     @JoinColumn(name = "id_usuario")
     private Usuario usuario;
