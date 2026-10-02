@@ -24,5 +24,4 @@ public class IncidenciaDTO {
     private Double longitud;
     private String prioridad;
     private CategoriaDTO categoria;
-    private UsuarioDTO usuario;
 }
