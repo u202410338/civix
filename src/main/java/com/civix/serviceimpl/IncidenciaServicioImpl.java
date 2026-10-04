@@ -21,9 +21,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
+import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Objects;
 import java.util.Set;
+import java.util.stream.Collectors;
 
 @Slf4j
 @Service
@@ -47,13 +50,20 @@ public class IncidenciaServicioImpl implements IncidenciaServicio {
     @Transactional
     @Override
     public IncidenciaDTO registrar(IncidenciaRegistroDTO incidenciaRegistroDTO) {
+        return registrar(incidenciaRegistroDTO, null);
+    }
+
+    @Transactional
+    @Override
+    public IncidenciaDTO registrar(IncidenciaRegistroDTO incidenciaRegistroDTO, String correoUsuario) {
         log.info("Registrando Incidencia: {}", incidenciaRegistroDTO.getTitulo());
         validarRegistro(incidenciaRegistroDTO);
+
         Categoria categoria = categoriaRepositorio.findById(incidenciaRegistroDTO.getIdCategoria())
                 .orElseThrow(() -> new ResourceNotFoundException(
                         "No existe la categoría con el id: " + incidenciaRegistroDTO.getIdCategoria()));
 
-        // Convertir el DTO a la entidad Incidencia
+        // Convertir el DTO a la entidad Incidencia (Sin FK a Usuario para evitar bucles)
         Incidencia incidencia = modelMapper.map(incidenciaRegistroDTO, Incidencia.class);
         LocalDateTime ahora = LocalDateTime.now();
         int horas = categoria.getHorasEstimadas() != null ? categoria.getHorasEstimadas() : 48;
@@ -69,7 +79,41 @@ public class IncidenciaServicioImpl implements IncidenciaServicio {
         incidencia.setCodigoIncidencia(
                 String.format("INC-%d-%04d", ahora.getYear(), incidencia.getIdIncidencia()));
         incidencia = incidenciaRepositorio.save(incidencia);
+
+        // Solución Gloria & Orihen: El ciudadano creador queda registrado en HistorialIncidencia si está autenticado
+        if (correoUsuario != null && !correoUsuario.isBlank()) {
+            Usuario ciudadano = usuarioRepositorio.findByCorreo(correoUsuario)
+                    .orElseThrow(() -> new ResourceNotFoundException("No se pudo identificar al usuario autenticado"));
+
+            HistorialIncidencia historialInicial = new HistorialIncidencia();
+            historialInicial.setIncidencia(incidencia);
+            historialInicial.setUsuario(ciudadano);
+            historialInicial.setEstadoAnterior("REGISTRADO");
+            historialInicial.setEstadoNuevo("PENDIENTE");
+            historialInicial.setComentario("Incidencia registrada por el ciudadano.");
+            historialInicial.setAreaAsignada(categoria.getNombre());
+            historialInicial.setUsuarioAccion(ciudadano.getNombre() + " " + ciudadano.getApellido());
+            historialInicial.setFechaCambio(ahora);
+            historialIncidenciaRepositorio.save(historialInicial);
+        }
+
         return modelMapper.map(incidencia, IncidenciaDTO.class);
+    }
+
+    @Override
+    public List<IncidenciaDTO> listarMisReportes(String correoUsuario) {
+        Usuario ciudadano = usuarioRepositorio.findByCorreo(correoUsuario)
+                .orElseThrow(() -> new ResourceNotFoundException("No se pudo identificar al usuario autenticado"));
+        List<HistorialIncidencia> historiales = historialIncidenciaRepositorio
+                .findByUsuario_IdUsuarioOrderByFechaCambioDesc(ciudadano.getIdUsuario());
+
+        return historiales.stream()
+                .map(HistorialIncidencia::getIncidencia)
+                .filter(Objects::nonNull)
+                .collect(Collectors.collectingAndThen(
+                        Collectors.toMap(Incidencia::getIdIncidencia, i -> i, (existing, replacement) -> existing, LinkedHashMap::new),
+                        m -> m.values().stream().map(i -> modelMapper.map(i, IncidenciaDTO.class)).toList()
+                ));
     }
 
     @Override
@@ -186,8 +230,13 @@ public class IncidenciaServicioImpl implements IncidenciaServicio {
 
     private void registrarHistorial(Incidencia incidencia, String estadoAnterior, String estadoNuevo,
                                     IncidenciaActualizarDTO dto, String correoUsuario) {
-        Usuario usuario = usuarioRepositorio.findByCorreo(correoUsuario)
+        Usuario admin = usuarioRepositorio.findByCorreo(correoUsuario)
                 .orElseThrow(() -> new ResourceNotFoundException("No se pudo identificar al usuario autenticado"));
+
+        // Se obtiene el ciudadano creador desde el primer registro del historial de la incidencia
+        List<HistorialIncidencia> previos = historialIncidenciaRepositorio
+                .findByIncidencia_IdIncidenciaOrderByFechaCambioAsc(incidencia.getIdIncidencia());
+        Usuario ciudadano = previos.isEmpty() ? admin : previos.get(0).getUsuario();
 
         HistorialIncidencia historial = new HistorialIncidencia();
         historial.setEstadoAnterior(estadoAnterior);
@@ -196,10 +245,12 @@ public class IncidenciaServicioImpl implements IncidenciaServicio {
                 ? "Estado cambiado a " + estadoNuevo + "."
                 : dto.getComentario());
         historial.setAreaAsignada(dto.getAreaAsignada());
-        historial.setUsuarioAccion(usuario.getNombre() + " " + usuario.getApellido());
+        // Atributo adicional sin FK: la persona que modifica (el admin)
+        historial.setUsuarioAccion(admin.getNombre() + " " + admin.getApellido());
         historial.setFechaCambio(LocalDateTime.now());
         historial.setIncidencia(incidencia);
-        historial.setUsuario(usuario);
+        // FK id_usuario: se mantiene vinculado al ciudadano que creó la incidencia
+        historial.setUsuario(ciudadano);
         historialIncidenciaRepositorio.save(historial);
     }
 

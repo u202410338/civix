@@ -82,7 +82,7 @@ public class HistorialIncidenciaServicioImpl implements HistorialIncidenciaServi
         if (!usuarioRepositorio.existsById(idUsuario)) {
             throw new ResourceNotFoundException("No existe el usuario con el id: " + idUsuario);
         }
-        return historialIncidenciaRepositorio.findByUsuario_IdUsuario(idUsuario)
+        return historialIncidenciaRepositorio.findByUsuario_IdUsuarioOrderByFechaCambioDesc(idUsuario)
                 .stream()
                 .map(historial -> modelMapper.map(historial, HistorialIncidenciaDTO.class))
                 .toList();

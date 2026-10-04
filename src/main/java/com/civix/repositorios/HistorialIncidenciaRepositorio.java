@@ -9,5 +9,8 @@ import java.util.List;
 @Repository
 public interface HistorialIncidenciaRepositorio extends JpaRepository<HistorialIncidencia,Long> {
     List<HistorialIncidencia> findByIncidencia_IdIncidenciaOrderByFechaCambioDesc(Long idIncidencia);
+    List<HistorialIncidencia> findByIncidencia_IdIncidenciaOrderByFechaCambioAsc(Long idIncidencia);
     List<HistorialIncidencia> findByUsuario_IdUsuario(Long idUsuario);
+    List<HistorialIncidencia> findByUsuario_IdUsuarioOrderByFechaCambioDesc(Long idUsuario);
+    List<HistorialIncidencia> findByUsuario_CorreoOrderByFechaCambioDesc(String correo);
 }

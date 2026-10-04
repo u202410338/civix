@@ -3,10 +3,12 @@ package com.civix.serviceimpl;
 import com.civix.dtos.CalificacionDTO;
 import com.civix.entidades.Calificacion;
 import com.civix.entidades.Incidencia;
+import com.civix.entidades.HistorialIncidencia;
 import com.civix.exceptions.BusinessRuleException;
 import com.civix.exceptions.DuplicateResourceException;
 import com.civix.exceptions.ResourceNotFoundException;
 import com.civix.repositorios.CalificacionRepositorio;
+import com.civix.repositorios.HistorialIncidenciaRepositorio;
 import com.civix.repositorios.IncidenciaRepositorio;
 import com.civix.servicios.CalificacionServicio;
 import jakarta.transaction.Transactional;
@@ -24,11 +26,19 @@ public class CalificacionServicioImpl implements CalificacionServicio {
     @Autowired
     private IncidenciaRepositorio incidenciaRepositorio;
     @Autowired
+    private HistorialIncidenciaRepositorio historialIncidenciaRepositorio;
+    @Autowired
     private ModelMapper modelMapper;
 
     @Transactional
     @Override
     public CalificacionDTO registrar(CalificacionDTO calificacionDTO) {
+        return registrar(calificacionDTO, null);
+    }
+
+    @Transactional
+    @Override
+    public CalificacionDTO registrar(CalificacionDTO calificacionDTO, String correoUsuario) {
         if (calificacionDTO.getIdIncidencia() == null) {
             throw new BusinessRuleException("El id de la incidencia es obligatorio");
         }
@@ -44,6 +54,20 @@ public class CalificacionServicioImpl implements CalificacionServicio {
         }
         if (calificacionRepositorio.existsByIncidencia_IdIncidencia(incidencia.getIdIncidencia())) {
             throw new DuplicateResourceException("La incidencia ya tiene una calificación registrada");
+        }
+
+        // HU27: Validación de pertenencia según solución Gloria & Orihen
+        // El ciudadano creador está registrado en el historial de la incidencia (sin bucle en Incidencia)
+        if (correoUsuario != null && !correoUsuario.isBlank()) {
+            List<HistorialIncidencia> historiales = historialIncidenciaRepositorio
+                    .findByIncidencia_IdIncidenciaOrderByFechaCambioAsc(incidencia.getIdIncidencia());
+            if (!historiales.isEmpty()) {
+                String correoCreador = historiales.get(0).getUsuario() != null
+                        ? historiales.get(0).getUsuario().getCorreo() : null;
+                if (correoCreador != null && !correoCreador.equalsIgnoreCase(correoUsuario)) {
+                    throw new BusinessRuleException("Solo el ciudadano que reportó la incidencia puede calificarla");
+                }
+            }
         }
 
         // Convertir el DTO a la entidad Calificacion
@@ -68,5 +92,12 @@ public class CalificacionServicioImpl implements CalificacionServicio {
         return calificacionRepositorio.findById(id)
                 .map(calificacion -> modelMapper.map(calificacion, CalificacionDTO.class))
                 .orElseThrow(() -> new ResourceNotFoundException("No existe la calificación con el id: " + id));
+    }
+
+    @Override
+    public CalificacionDTO buscarPorIncidencia(Long idIncidencia) {
+        return calificacionRepositorio.findByIncidencia_IdIncidencia(idIncidencia)
+                .map(calificacion -> modelMapper.map(calificacion, CalificacionDTO.class))
+                .orElseThrow(() -> new ResourceNotFoundException("No existe calificación para la incidencia con el id: " + idIncidencia));
     }
 }

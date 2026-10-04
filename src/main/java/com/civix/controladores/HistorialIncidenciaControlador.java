@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/historia-incidencia")
+@RequestMapping({"/historial-incidencia", "/historia-incidencia"})
 public class HistorialIncidenciaControlador {
     @Autowired
     private HistorialIncidenciaServicio historialIncidenciaServicio;
@@ -28,15 +28,21 @@ public class HistorialIncidenciaControlador {
         return ResponseEntity.ok(historialIncidenciaServicio.listar());
     }
 
-    @GetMapping("/buscar-por-incidencia-recientes")
+    @GetMapping({"/buscar-por-incidencia", "/buscar-por-incidencia-recientes"})
     @PreAuthorize("hasAnyRole('CIUDADANO','ADMINISTRADOR')")
-    public ResponseEntity<List<HistorialIncidenciaDTO>> buscarPorIncidenciaOrdenadaRecientes(Long incidenciaId){
-        return ResponseEntity.ok(historialIncidenciaServicio.buscarPorIncidenciaOrdenadaRecientes(incidenciaId));
+    public ResponseEntity<List<HistorialIncidenciaDTO>> buscarPorIncidenciaOrdenadaRecientes(
+            @RequestParam(value = "id_incidencia", required = false) Long id_incidencia,
+            @RequestParam(value = "incidenciaId", required = false) Long incidenciaId) {
+        Long id = id_incidencia != null ? id_incidencia : incidenciaId;
+        return ResponseEntity.ok(historialIncidenciaServicio.buscarPorIncidenciaOrdenadaRecientes(id));
     }
 
     @GetMapping("/buscar-por-usuario")
-    @PreAuthorize("hasRole('ADMINISTRADOR') or @autorizacion.esUsuarioActual(#idUsuario)")
-    public ResponseEntity<List<HistorialIncidenciaDTO>> buscarPorUsuario(Long idUsuario){
-        return ResponseEntity.ok(historialIncidenciaServicio.buscarPorUsuario(idUsuario));
+    @PreAuthorize("hasRole('ADMINISTRADOR') or @autorizacion.esUsuarioActual(#idUsuario != null ? #idUsuario : #id_usuario)")
+    public ResponseEntity<List<HistorialIncidenciaDTO>> buscarPorUsuario(
+            @RequestParam(value = "id_usuario", required = false) Long id_usuario,
+            @RequestParam(value = "idUsuario", required = false) Long idUsuario) {
+        Long id = idUsuario != null ? idUsuario : id_usuario;
+        return ResponseEntity.ok(historialIncidenciaServicio.buscarPorUsuario(id));
     }
 }
