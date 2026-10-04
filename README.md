@@ -4,7 +4,7 @@ Civix es una plataforma digital desarrollada por la startup CivixIS, orientada a
 
 Características Principales
 
-El sistema está estructurado en los siguientes módulos funcionales:
+El sistema está estructurado en los siguientes módulos funcionales para civix:
 
 *   **Reportes Georreferenciados:** Los ciudadanos pueden registrar problemas urbanos marcando coordenadas exactas en un mapa interactivo y adjuntando evidencia fotográfica.
 *   **Gestión y Seguimiento Operativo:** Los administradores municipales pueden filtrar el listado de casos, actualizar sus estados (Pendiente, En Proceso, Atendido) y mantener un historial auditable de cada cambio.
