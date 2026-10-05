@@ -11,3 +11,11 @@ El sistema está estructurado en los siguientes módulos funcionales para civix:
 *   **Categorización Dinámica:** Clasificación estructurada de las problemáticas (ej. Pistas y Vías, Alumbrado Público) para derivarlas eficientemente a las áreas correspondientes.
 *   **Control de Accesos y Roles:** Administración segura mediante perfiles de ciudadanos y cuentas con privilegios de gestión municipal.
 *   **Sistema de Retroalimentación:** Una vez resuelta la incidencia, el usuario ciudadano puede calificar la calidad de la atención recibida, generando métricas de satisfacción para la alcaldía.
+
+
+Equipo de Desarrollo
+*   **Cantaro Hidalgo Alexander Lionel**
+*   **Orihuela Aquino, Henry**
+*   **Pulido Milla, Jairo Raul**
+*   **Salas Ramírez, Gloria María del Pilar**
+*   **Soto Cotrina, Emmanuel Herbet**
