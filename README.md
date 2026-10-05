@@ -2,7 +2,7 @@
 
 Civix es una plataforma digital desarrollada por la startup CivixIS, orientada a fortalecer la participación ciudadana y mejorar la comunicación entre los ciudadanos y los gobiernos locales. Su propósito principal es brindar un canal accesible y eficiente para que la población reporte problemáticas de su entorno, como deficiencias en infraestructura, seguridad o servicios públicos. A través de esta herramienta, los usuarios pueden registrar incidencias mediante descripciones, imágenes y ubicación geográfica. Posteriormente, el sistema organiza y canaliza esta información hacia las autoridades correspondientes, lo que facilita el seguimiento de los casos y promueve una gestión municipal más transparente y eficiente.  
 
-Características Principales
+**Características Principales**
 
 El sistema está estructurado en los siguientes módulos funcionales para civix:
 
@@ -13,9 +13,9 @@ El sistema está estructurado en los siguientes módulos funcionales para civix:
 *   **Sistema de Retroalimentación:** Una vez resuelta la incidencia, el usuario ciudadano puede calificar la calidad de la atención recibida, generando métricas de satisfacción para la alcaldía.
 
 
-Equipo de Desarrollo
-*   **Cantaro Hidalgo Alexander Lionel**
-*   **Orihuela Aquino, Henry**
-*   **Pulido Milla, Jairo Raul**
-*   **Salas Ramírez, Gloria María del Pilar**
-*   **Soto Cotrina, Emmanuel Herbet**
+**Equipo de Desarrollo**
+*   Cantaro Hidalgo Alexander Lionel
+*   Orihuela Aquino, Henry
+*   Pulido Milla, Jairo Raul
+*   Salas Ramírez, Gloria María del Pilar
+*   Soto Cotrina, Emmanuel Herbet
